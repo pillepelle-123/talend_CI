@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?><talendfile:ProcessType xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmlns:TalendMapper="http://www.talend.org/mapper" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" defaultContext="Default" jobType="Standard" xmi:version="2.0">
-  <context confirmationNeeded="false" name="Default">
-    <contextParameter comment="" name="input_file1" prompt="input_file1?" promptNeeded="false" type="id_File" value="/home/student/Projects/JoinData/Customers.csv"/>
-    <contextParameter comment="" name="input_file2" prompt="input_file2?" promptNeeded="false" type="id_File" value="/home/student/Projects/JoinData/States.txt"/>
-    <contextParameter comment="" name="output_file" prompt="output_file?" promptNeeded="false" type="id_File" value="/home/student/Projects/JoinData/JoinData_Out.csv"/>
-  </context>
+  <context confirmationNeeded="false" name="Default"/>
   <parameters>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_X" show="false" value="0"/>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" show="false" value="0"/>
@@ -31,6 +27,9 @@
     <elementParameter field="RADIO" name="FROM_DATABASE_FLAG_IMPLICIT_CONTEXT" show="false" value="false"/>
     <elementParameter field="FILE" name="IMPLICIT_TCONTEXTLOAD_FILE" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="FIELDSEPARATOR" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="OVERRIDE_ENCODING_FLAG" show="false" value="false"/>
+    <elementParameter field="ENCODING_TYPE" name="OVERRIDE_ENCODING_IN_EXTRA" show="false" value="ISO-8859-15"/>
+    <elementParameter field="TECHNICAL" name="OVERRIDE_ENCODING_IN_EXTRA:ENCODING_TYPE" show="false" value="ISO-8859-15"/>
     <elementParameter field="CLOSED_LIST" name="DB_TYPE_IMPLICIT_CONTEXT" show="false" value=""/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION_IMPLICIT_CONTEXT" show="false" value=""/>
     <elementParameter field="TEXT" name="URL_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
@@ -43,7 +42,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:EEjrlErSnDDjZEppQooFvO85l+FnA1J5RFhWr4K0"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:wcZEiUlMv9PHm0C6Y9um9PBcBZuPkRsUkfM9CTSl"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
@@ -58,7 +57,7 @@
     <elementParameter field="CHECK" name="ON_METERCATCHER_FLAG" value="false"/>
     <elementParameter field="CHECK" name="ON_CONSOLE_FLAG" show="false" value="false"/>
     <elementParameter field="CHECK" name="ON_FILES_FLAG" show="false" value="false"/>
-    <elementParameter field="DIRECTORY" name="FILE_PATH" show="false" value="&quot;/home/gvi/workspace/.metadata&quot;"/>
+    <elementParameter field="DIRECTORY" name="FILE_PATH" show="false" value="&quot;C:/Users/pstedeler/workspace/.metadata&quot;"/>
     <elementParameter field="TEXT" name="FILENAME_STATS" show="false" value="&quot;stats_file.txt&quot;"/>
     <elementParameter field="TEXT" name="FILENAME_LOGS" show="false" value="&quot;logs_file.txt&quot;"/>
     <elementParameter field="TEXT" name="FILENAME_METTER" show="false" value="&quot;meter_file.txt&quot;"/>
@@ -78,7 +77,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:/W/RwbG3TmFQM87zdR8G6x3RpNfwLe8s+CPrQH2q"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:ZOcvXiXAIgR1SVfaH0vLPhrQOAS4+NtAfSrfhVnv"/>
     <elementParameter field="FILE" name="DBFILE" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" show="false" value="&quot;&quot;"/>
@@ -111,13 +110,12 @@
     <routinesParameter id="_YJ2iP_42EeSB-PMjvt4teQ" name="TalendString"/>
     <routinesParameter id="_wncjMO21EeaLctyYoxLhmg" name="DataMasking"/>
     <routinesParameter id="_wpiN4O21EeaLctyYoxLhmg" name="DataQualityDependencies"/>
-    <routinesParameter id="_wsqaYO21EeaLctyYoxLhmg" name="MDM"/>
     <routinesParameter id="_iQk9UK-HEei2Fs80y7coAw" name="TalendStringUtil"/>
   </parameters>
   <node componentName="tFileInputDelimited" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="96" posY="224">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileInputDelimited_1"/>
     <elementParameter field="LABEL" name="FILENAMETEXT" value="&quot;When the input source is a stream or a zip file,footer and random shouldn't be bigger than 0.&quot;"/>
-    <elementParameter field="FILE" name="FILENAME" value="context.input_file1"/>
+    <elementParameter field="FILE" name="FILENAME" value="&quot;C:/Users/pstedeler/OneDrive - cimt ag/Schulungen/202012 Talend/Talend Academy/Talend and Continuous Integration/Projects/JoinData/Customers.csv&quot;"/>
     <elementParameter field="CHECK" name="CSV_OPTION" value="false"/>
     <elementParameter field="TEXT" name="ROWSEPARATOR" value="&quot;\n&quot;"/>
     <elementParameter field="OPENED_LIST" name="CSVROWSEPARATOR" show="false" value="&quot;\n&quot;"/>
@@ -237,7 +235,7 @@
   <node componentName="tFileInputDelimited" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="288" posY="96">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileInputDelimited_2"/>
     <elementParameter field="LABEL" name="FILENAMETEXT" value="&quot;When the input source is a stream or a zip file,footer and random shouldn't be bigger than 0.&quot;"/>
-    <elementParameter field="FILE" name="FILENAME" value="context.input_file2"/>
+    <elementParameter field="FILE" name="FILENAME" value="&quot;C:/Users/pstedeler/OneDrive - cimt ag/Schulungen/202012 Talend/Talend Academy/Talend and Continuous Integration/Projects/JoinData/States.txt&quot;"/>
     <elementParameter field="CHECK" name="CSV_OPTION" value="false"/>
     <elementParameter field="TEXT" name="ROWSEPARATOR" value="&quot;\n&quot;"/>
     <elementParameter field="OPENED_LIST" name="CSVROWSEPARATOR" show="false" value="&quot;\n&quot;"/>
@@ -341,7 +339,7 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileOutputDelimited_1"/>
     <elementParameter field="CHECK" name="USESTREAM" value="false"/>
     <elementParameter field="TEXT" name="STREAMNAME" show="false" value="outputStream"/>
-    <elementParameter field="FILE" name="FILENAME" value="context.output_file"/>
+    <elementParameter field="FILE" name="FILENAME" value="&quot;C:/Users/pstedeler/OneDrive - cimt ag/Schulungen/202012 Talend/Talend Academy/Talend and Continuous Integration/Projects/JoinData/JoinData_Out.csv&quot;"/>
     <elementParameter field="TEXT" name="ROWSEPARATOR" value="&quot;\n&quot;"/>
     <elementParameter field="CHECK" name="OS_LINE_SEPARATOR_AS_ROW_SEPARATOR" show="false" value="true"/>
     <elementParameter field="OPENED_LIST" name="CSVROWSEPARATOR" show="false" value="&quot;\n&quot;"/>
@@ -426,13 +424,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_9ee777c2-e33c-4c8e-a112-82e77e35ab03"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>ib9X3u/j/SqmDYb2rhvf1WBLg1mF4YWJ//cwIAm4h5Qf+imELhnEjM4mmWlrDBAnN7ykO2W1IKVK
-5bPu/3Eptw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_b1759bf9-78d7-4449-ac4a-06c2a5a33aa2"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>tzXn8EvuAcLCb38GixJQ6RYOUxUbKNXEmGEbd8ottYcGmxnFpvFMRhXXVVrqhAlbzNIAYQIO3gQS
-V46AbMdHXg==</DigestValue></Reference></SignedInfo><SignatureValue>mKZzZPkry2YiqnjY5lsZ+2D98LR65tuSRCndBf2PbWy521aX7wYDdqOtnzhe0oP5BUYP+s0ZxJxL
-et1xIa8rvWgreOlaaB91H0G1APTrBPUCmlP1ecO0nMHLL7jSH9kPPfuJMxTTTjHi8QBTrmbPp5UL
-N3csMxWMgUqEthqaY+IgIdjekkUDk8RZV2d5+xMX6q72hIdB/e79LLmaTNjlyIIRoIyWTKtL3u0y
-bof68Nuf0REi8ARfEnJs6woYInLIzqesnb+/hscMVUE+qtKNTL5NCT9VraDfBroYa3raoMJp0Z5J
-VuEeRJR9yUR0U2MZymgkr7NCv2CzHbf/uGPEYA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_80ac56e9-4db1-462a-ad5a-5ea5fb2d6207"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>295ilpHe1eb2cdoJWqUunW2YucqjLWZufFRccIJTkiACZJCt85hxZQgjOnSUC3vS6lNnT5XgRkjj
+OvaSZPZ5GA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_34c17885-6a7d-49b9-a638-92d1f2502f17"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>l0SZIsf5xGRX/WdxAXguvWn59cwOKhr+XRgmlX3pTbGILiNoP4khskcCS31jdeakrtt/ttJIfPX+
+6DUE20MhBA==</DigestValue></Reference></SignedInfo><SignatureValue>BsadgXs+ZYHrx9YHzC4pkRePMuufdckA1N5/Yis8JOCKA57c+X9R9Wk/QEP0QoYeNLaMxmmu0RWR
+Ztfegr/bfDN3WhFVIhy8spFPXwF4DjGG5Vjd4JZm7OEQGKM3gqU1IdlXA0KqUEmUfm0/tQCpNB2X
+9FMqMwIx4dpQjSb1KpgTY3VUoLDJnlJZf9QsFB7mxQv5JLxJKxLf+BRYffISHb6uk4bmrnAu2qN7
+kXwjisZ7qxdbSK3AO2K0X7UB8SoQKZkPNcP7AGkSeZtEf5g2TPzaz1IVtvWEF+Ius7VVbbmnAAzk
+9O0eKW0wU/0q2aNLWth3pF5LoeDX208IdAyOvA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
@@ -454,4 +452,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_b1759bf9-78d7-4449-ac4a-06c2a5a33aa2" Target="#_9ee777c2-e33c-4c8e-a112-82e77e35ab03"><Timestamp>2021-02-08 15:59:08</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_34c17885-6a7d-49b9-a638-92d1f2502f17" Target="#_80ac56e9-4db1-462a-ad5a-5ea5fb2d6207"><Timestamp>2021-02-08 16:02:07</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
