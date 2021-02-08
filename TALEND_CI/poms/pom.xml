@@ -12,12 +12,13 @@
     <module>jobs/process/j01_joindata_0.1</module>
     <module>jobs/process/j01_test_0.1</module>
     <module>code/routines</module>
-    <module>code/beans</module>
   </modules>
   <properties>
     <signer.version>7.3.1</signer.version>
     <talend.project.name>TALEND_CI</talend.project.name>
     <encoding>UTF-8</encoding>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
     <maven.deploy.skip>true</maven.deploy.skip>
     <talend.docker.tag>${project.version}</talend.docker.tag>
     <talend.docker.name>${talend.project.name.lowercase}/${talend.job.folder}%a</talend.docker.name>
