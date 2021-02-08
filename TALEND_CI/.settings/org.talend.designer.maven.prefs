@@ -1,4 +1,4 @@
-PROJECT_GROUPID=org.example.talend_ci
+PROJECT_GROUPID=org.pille.talend_ci
 PROJECT_VERSION=0.1.0
 PUBLISH_AS_SNAPSHOT=true
 eclipse.preferences.version=1
